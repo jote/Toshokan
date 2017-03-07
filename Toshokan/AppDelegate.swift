@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().delegate = self
         
+//        初回起動
+        let userDefaults = UserDefaults()
+        if !userDefaults.bool(forKey: ToshokanConfigKey.hasAgreement.rawValue) {
+            //初回画面を起動、契約に同意させる
+            let s = UIStoryboard(name: "Agreement", bundle: nil)
+            let vc = s.instantiateInitialViewController()
+            self.window?.rootViewController = vc
+        }
+        
         return true
     }
 

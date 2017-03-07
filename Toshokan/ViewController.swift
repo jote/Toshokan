@@ -11,13 +11,26 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    let _searchResultSegue = "toSearchResultSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         GIDSignIn.sharedInstance().uiDelegate = self
         signInButton.addTarget(self, action: #selector(ViewController.didTapSignInButton), for: UIControlEvents.touchUpInside)
         signOutButton.addTarget(self, action: #selector(ViewController.didTapSignOutButton), for: UIControlEvents.touchUpInside)
+        
+        searchButton.backgroundColor = UIColor.blue
+        searchButton.tintColor = UIColor.white
+        searchButton.setImage(#imageLiteral(resourceName: "ic_search"), for: .normal)
+        searchButton.addTarget(self, action: #selector(ViewController.didtapSearchButton), for: UIControlEvents.touchUpInside)
+        searchButton.sizeToFit()
+        searchButton.isEnabled = false
+        
+        searchTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +44,17 @@ class ViewController: UIViewController {
     
     func didTapSignOutButton() {
         GIDSignIn.sharedInstance().signOut()
+    }
+    
+    func didtapSearchButton() {
+        performSegue(withIdentifier: _searchResultSegue, sender: searchTextField.text)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == _searchResultSegue {
+            let vc = segue.destination as! SearchResultViewController
+            vc.searchWord = sender as! String
+        }
     }
 
 }
@@ -55,4 +79,17 @@ extension ViewController: GIDSignInUIDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ViewController: UITextFieldDelegate{
+    //    編集が終わったらキーボードを隠す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        if let word = textField.text {
+            if !word.isEmpty {
+                self.searchButton.isEnabled = true
+            }
+        }
+        return true
+    }
 }

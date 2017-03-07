@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lKv-Xa-Ybg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="9y1-jn-zUu">
+            <objects>
+                <viewController storyboardIdentifier="SearchResult" id="lKv-Xa-Ybg" customClass="SearchResultViewController" customModule="Toshokan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nKK-a0-0u2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ovA-fG-paU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NqN-Nf-Xsk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示切り替え" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xio-GE-Z37">
+                                <rect key="frame" x="245" y="30" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-Jm-trA">
+                                <rect key="frame" x="256" y="61" width="109" height="29"/>
+                                <segments>
+                                    <segment title="リスト"/>
+                                    <segment title="サムネ"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-IN-uXp">
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e9V-oq-fo5">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="i2M-K9-k4O">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKf-IN-uXp" firstAttribute="leading" secondItem="NqN-Nf-Xsk" secondAttribute="leading" id="QuH-Dm-jj1"/>
+                            <constraint firstItem="dDH-Jm-trA" firstAttribute="top" secondItem="xio-GE-Z37" secondAttribute="bottom" constant="10" id="aBx-Ag-F2w"/>
+                            <constraint firstItem="ovA-fG-paU" firstAttribute="top" secondItem="dKf-IN-uXp" secondAttribute="bottom" id="bRt-6u-MsZ"/>
+                            <constraint firstItem="xio-GE-Z37" firstAttribute="top" secondItem="nKK-a0-0u2" secondAttribute="bottom" constant="10" id="eSP-iy-yu0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xio-GE-Z37" secondAttribute="trailing" constant="10" id="kCe-Lm-WTg"/>
+                            <constraint firstItem="dKf-IN-uXp" firstAttribute="top" secondItem="dDH-Jm-trA" secondAttribute="bottom" constant="10" id="pSM-tL-mZe"/>
+                            <constraint firstAttribute="trailing" secondItem="dDH-Jm-trA" secondAttribute="trailing" constant="10" id="x4Y-Lx-nSI"/>
+                            <constraint firstAttribute="trailing" secondItem="dKf-IN-uXp" secondAttribute="trailing" id="y4Z-ex-Qqm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="SSy-yq-zgW"/>
+                    <connections>
+                        <outlet property="bookListView" destination="dKf-IN-uXp" id="aY2-hf-Df3"/>
+                        <outlet property="switchLayoutSegment" destination="dDH-Jm-trA" id="9Lx-Hi-x9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NxZ-cr-XJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+</document>
