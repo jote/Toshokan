@@ -40,6 +40,7 @@ PODS:
   - RxSwift (3.2.0)
   - RxTest (3.2.0):
     - RxSwift (~> 3.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Google/SignIn
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
@@ -61,7 +63,8 @@ SPEC CHECKSUMS:
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 302d5cb051472ceb88635dec8a4a0cf84bc209b0
+PODFILE CHECKSUM: 0f0e0353c76abd574b81ef9a3b5f243b27fb24f6
 
 COCOAPODS: 1.2.0
