@@ -71,6 +71,7 @@
                     <navigationItem key="navigationItem" title="Title" id="SSy-yq-zgW"/>
                     <connections>
                         <outlet property="bookListView" destination="dKf-IN-uXp" id="aY2-hf-Df3"/>
+                        <outlet property="switchLabel" destination="xio-GE-Z37" id="pta-8d-Jg5"/>
                         <outlet property="switchLayoutSegment" destination="dDH-Jm-trA" id="9Lx-Hi-x9e"/>
                     </connections>
                 </viewController>

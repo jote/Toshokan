@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
@@ -15,20 +16,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     let _searchResultSegue = "toSearchResultSegue"
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         GIDSignIn.sharedInstance().uiDelegate = self
-        signInButton.addTarget(self, action: #selector(ViewController.didTapSignInButton), for: UIControlEvents.touchUpInside)
-        signOutButton.addTarget(self, action: #selector(ViewController.didTapSignOutButton), for: UIControlEvents.touchUpInside)
+        signInButton.rx.tap.subscribe(onNext: {[weak self] in self?.didTapSignInButton() }).disposed(by: disposeBag)
+        signOutButton.rx.tap.subscribe(onNext: {[weak self] in self?.didTapSignOutButton()}).disposed(by: disposeBag)
         
         searchButton.backgroundColor = UIColor.blue
         searchButton.tintColor = UIColor.white
         searchButton.setImage(#imageLiteral(resourceName: "ic_search"), for: .normal)
-        searchButton.addTarget(self, action: #selector(ViewController.didtapSearchButton), for: UIControlEvents.touchUpInside)
         searchButton.sizeToFit()
         searchButton.isEnabled = false
+        searchButton.rx.tap.subscribe(onNext: {[weak self] in self?.didtapSearchButton()}).disposed(by: disposeBag)
         
         searchTextField.delegate = self
     }
