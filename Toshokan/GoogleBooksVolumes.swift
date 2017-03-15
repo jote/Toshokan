@@ -55,7 +55,7 @@ extension GoogleBooksVolumes {
         let urlRequet = URLRequest(url: url)
         return URLSession.shared
             .rx.response(request: urlRequet)
-            .retry(3).observeOn(Dependencies.sharedDependencies.backgroundWorkScheduler)
+            .retry(3)
             .map{ httpResponse, data -> GoogleBooksVolumesResponse in
                 if httpResponse.statusCode == 404 {
                     return GoogleBooksVolumesResponse.init(volumes: [])

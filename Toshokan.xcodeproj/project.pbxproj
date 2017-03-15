@@ -24,7 +24,6 @@
 		462AFA9C1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */; };
 		462AFA9D1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */; };
 		462AFA9E1E780CFD005C8CE3 /* BookGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */; };
-		462AFAA21E791A15005C8CE3 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFAA11E791A15005C8CE3 /* Dependencies.swift */; };
 		46EE949F1E65306C00096DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE949E1E65306C00096DE0 /* AppDelegate.swift */; };
 		46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE94A01E65306C00096DE0 /* ViewController.swift */; };
 		46EE94A41E65306C00096DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EE94A21E65306C00096DE0 /* Main.storyboard */; };
@@ -75,7 +74,6 @@
 		46248C661E6E975A005667A5 /* GoogleBooksVolumes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBooksVolumes.swift; sourceTree = "<group>"; };
 		462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookGridCollectionViewCell.xib; sourceTree = "<group>"; };
-		462AFAA11E791A15005C8CE3 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		46EE949B1E65306C00096DE0 /* Toshokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toshokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EE949E1E65306C00096DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46EE94A01E65306C00096DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				460B64391E6834FA001639C3 /* Model */,
-				462AFAA11E791A15005C8CE3 /* Dependencies.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -528,7 +525,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				462AFAA21E791A15005C8CE3 /* Dependencies.swift in Sources */,
 				460B643B1E683541001639C3 /* ToshokanConfigModel.swift in Sources */,
 				460B64321E68005C001639C3 /* AgreementViewController.swift in Sources */,
 				46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */,
