@@ -2,7 +2,7 @@
 //  AgreementViewController.swift
 //  Toshokan
 //
-//  Created by 坂　この実 on 2017/03/02.
+//  Created by jote on 2017/03/02.
 //  Copyright © 2017年 jote. All rights reserved.
 //
 
@@ -39,7 +39,7 @@ class AgreementViewController: UIViewController {
 
     func tappedAgreeButton() {
 //        契約同意の処理を実行
-        viewModel.setAgreement()
+        viewModel.setAgreement(true)
         
         //普通のMain viewに戻す
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)

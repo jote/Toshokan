@@ -46,6 +46,17 @@ class ViewController: UIViewController {
     
     func didTapSignOutButton() {
         GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance().disconnect()
+        
+        //WebViewのcookieを削除
+        let cookietorage = HTTPCookieStorage.shared
+        let url: URL! = URL(string: GoogleAPI.HOST_NAME)
+        if let cookies = cookietorage.cookies(for: url) {
+            cookies.forEach({ cookie in
+                cookietorage.deleteCookie(cookie)
+            })
+        }
+        
     }
     
     func didtapSearchButton() {

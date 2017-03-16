@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
 //        初回起動
         let userDefaults = UserDefaults()
-        if !userDefaults.bool(forKey: ToshokanConfigKey.hasAgreement.rawValue) {
+        if !userDefaults.bool(forKey: ToshokanUserDefaultsKey.hasAgreement.rawValue) {
             //初回画面を起動、契約に同意させる
             let s = UIStoryboard(name: "Agreement", bundle: nil)
             let vc = s.instantiateInitialViewController()
@@ -61,35 +61,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    
-    
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
         if (error == nil) {
             // サインイン成功
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-
-            print("userId: \(userId), fullname: \(fullName)")
-            let accessToken = user.authentication.accessToken
-            let token = user.authentication.idToken
-
-            print("accessToken: \(accessToken)")
-            print("token: \(token)")
+            GoogleUserModel.share.userId = user.userID
+            GoogleUserModel.share.name = user.profile.name
+            GoogleUserModel.share.accessToken = user.authentication.accessToken
+            GoogleUserModel.share.setAccessTokenExpirationDate(user.authentication.accessTokenExpirationDate)
+            GoogleUserModel.share.refreshToken = user.authentication.refreshToken
+            GoogleUserModel.share.idToken = user.authentication.idToken
+            GoogleUserModel.share.setIdTokenExpirationDate(user.authentication.idTokenExpirationDate)
+            
+            print("userId: \(GoogleUserModel.share.userId), accessToken: \(GoogleUserModel.share.accessToken)")
+            GoogleUserModel.share.save()
         } else {
             // サインイン失敗
             print("サインイン失敗したよ！！！！！   \(error.localizedDescription)")
         }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
     }
 
 

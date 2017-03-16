@@ -14,7 +14,7 @@
 		460B64321E68005C001639C3 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B64311E68005C001639C3 /* AgreementViewController.swift */; };
 		460B64341E680D61001639C3 /* AgreementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B64331E680D61001639C3 /* AgreementViewModel.swift */; };
 		460B64371E681530001639C3 /* Agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 460B64361E681530001639C3 /* Agreement.html */; };
-		460B643B1E683541001639C3 /* ToshokanConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B643A1E683541001639C3 /* ToshokanConfigModel.swift */; };
+		460B643B1E683541001639C3 /* ToshokanUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B643A1E683541001639C3 /* ToshokanUserDefaultsModel.swift */; };
 		460B643E1E683E5E001639C3 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460B643D1E683E5E001639C3 /* SearchResult.storyboard */; };
 		460B64401E683E7C001639C3 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B643F1E683E7C001639C3 /* SearchResultViewController.swift */; };
 		461A6C901E6FBD2800E8A569 /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A6C8F1E6FBD2800E8A569 /* GoogleApi.swift */; };
@@ -24,6 +24,7 @@
 		462AFA9C1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */; };
 		462AFA9D1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */; };
 		462AFA9E1E780CFD005C8CE3 /* BookGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */; };
+		462AFAA61E7A451C005C8CE3 /* GoogleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */; };
 		46EE949F1E65306C00096DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE949E1E65306C00096DE0 /* AppDelegate.swift */; };
 		46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE94A01E65306C00096DE0 /* ViewController.swift */; };
 		46EE94A41E65306C00096DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EE94A21E65306C00096DE0 /* Main.storyboard */; };
@@ -32,7 +33,7 @@
 		46EE94B41E65306C00096DE0 /* ToshokanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE94B31E65306C00096DE0 /* ToshokanTests.swift */; };
 		46EE94BF1E65306C00096DE0 /* ToshokanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE94BE1E65306C00096DE0 /* ToshokanUITests.swift */; };
 		46F8F6201E72BC70008D542C /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A6C8F1E6FBD2800E8A569 /* GoogleApi.swift */; };
-		46F8F6221E72BC7C008D542C /* ToshokanConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B643A1E683541001639C3 /* ToshokanConfigModel.swift */; };
+		46F8F6221E72BC7C008D542C /* ToshokanUserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B643A1E683541001639C3 /* ToshokanUserDefaultsModel.swift */; };
 		46FFD3E61E65607800082EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46FFD3E51E65607800082EE0 /* GoogleService-Info.plist */; };
 		46FFD3E71E65607800082EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46FFD3E51E65607800082EE0 /* GoogleService-Info.plist */; };
 		46FFD3E81E65607800082EE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46FFD3E51E65607800082EE0 /* GoogleService-Info.plist */; };
@@ -65,7 +66,7 @@
 		460B64311E68005C001639C3 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		460B64331E680D61001639C3 /* AgreementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewModel.swift; sourceTree = "<group>"; };
 		460B64361E681530001639C3 /* Agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Agreement.html; sourceTree = "<group>"; };
-		460B643A1E683541001639C3 /* ToshokanConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToshokanConfigModel.swift; sourceTree = "<group>"; };
+		460B643A1E683541001639C3 /* ToshokanUserDefaultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToshokanUserDefaultsModel.swift; sourceTree = "<group>"; };
 		460B643D1E683E5E001639C3 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		460B643F1E683E7C001639C3 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		461A6C8F1E6FBD2800E8A569 /* GoogleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApi.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		46248C661E6E975A005667A5 /* GoogleBooksVolumes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBooksVolumes.swift; sourceTree = "<group>"; };
 		462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleUserModel.swift; sourceTree = "<group>"; };
 		46EE949B1E65306C00096DE0 /* Toshokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toshokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EE949E1E65306C00096DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46EE94A01E65306C00096DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,9 +164,10 @@
 		460B64391E6834FA001639C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				460B643A1E683541001639C3 /* ToshokanConfigModel.swift */,
+				460B643A1E683541001639C3 /* ToshokanUserDefaultsModel.swift */,
 				46248C661E6E975A005667A5 /* GoogleBooksVolumes.swift */,
 				461A6C8F1E6FBD2800E8A569 /* GoogleApi.swift */,
+				462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -525,7 +528,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460B643B1E683541001639C3 /* ToshokanConfigModel.swift in Sources */,
+				460B643B1E683541001639C3 /* ToshokanUserDefaultsModel.swift in Sources */,
+				462AFAA61E7A451C005C8CE3 /* GoogleUserModel.swift in Sources */,
 				460B64321E68005C001639C3 /* AgreementViewController.swift in Sources */,
 				46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */,
 				462AFA9C1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift in Sources */,
@@ -543,7 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F8F6221E72BC7C008D542C /* ToshokanConfigModel.swift in Sources */,
+				46F8F6221E72BC7C008D542C /* ToshokanUserDefaultsModel.swift in Sources */,
 				46EE94B41E65306C00096DE0 /* ToshokanTests.swift in Sources */,
 				46F8F6201E72BC70008D542C /* GoogleApi.swift in Sources */,
 				461A6C921E72B58800E8A569 /* GoogleBooksVolumesTests.swift in Sources */,

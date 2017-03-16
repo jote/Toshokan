@@ -2,7 +2,7 @@
 //  GoogleBooksVolumesTests.swift
 //  Toshokan
 //
-//  Created by 坂　この実 on 2017/03/10.
+//  Created by jote on 2017/03/10.
 //  Copyright © 2017年 jote. All rights reserved.
 //
 

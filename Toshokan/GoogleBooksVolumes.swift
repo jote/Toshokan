@@ -2,7 +2,7 @@
 //  GoogleBooksVolumes.swift
 //  Toshokan
 //
-//  Created by 坂　この実 on 2017/03/07.
+//  Created by jote on 2017/03/07.
 //  Copyright © 2017年 jote. All rights reserved.
 //
 
@@ -48,7 +48,7 @@ extension GoogleBooksVolumes {
     func getUrl(query: String) -> URL {
         let query_str = query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let str = "?q=\(query_str)"
-        return URL(string: HOST_NAME + path + str)!
+        return URL(string: GoogleBooksVolumes.HOST_NAME + path + str)!
     }
     
     private func loadSearchUrl(url: URL) -> Observable<GoogleBooksVolumesResponse> {
