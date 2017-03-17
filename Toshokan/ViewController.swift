@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     }
 
     func didTapSignInButton() {
+        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/books"]
         GIDSignIn.sharedInstance().signIn()
     }
     
