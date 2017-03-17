@@ -25,6 +25,7 @@
 		462AFA9D1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */; };
 		462AFA9E1E780CFD005C8CE3 /* BookGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */; };
 		462AFAA61E7A451C005C8CE3 /* GoogleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */; };
+		4683A5A91E7C0E1000EEA9FB /* GoogleMyLibraryBookshelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683A5A81E7C0E1000EEA9FB /* GoogleMyLibraryBookshelves.swift */; };
 		46EE949F1E65306C00096DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE949E1E65306C00096DE0 /* AppDelegate.swift */; };
 		46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE94A01E65306C00096DE0 /* ViewController.swift */; };
 		46EE94A41E65306C00096DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EE94A21E65306C00096DE0 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		462AFA9A1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		462AFA9B1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookGridCollectionViewCell.xib; sourceTree = "<group>"; };
 		462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleUserModel.swift; sourceTree = "<group>"; };
+		4683A5A81E7C0E1000EEA9FB /* GoogleMyLibraryBookshelves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMyLibraryBookshelves.swift; sourceTree = "<group>"; };
 		46EE949B1E65306C00096DE0 /* Toshokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toshokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EE949E1E65306C00096DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46EE94A01E65306C00096DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				46248C661E6E975A005667A5 /* GoogleBooksVolumes.swift */,
 				461A6C8F1E6FBD2800E8A569 /* GoogleApi.swift */,
 				462AFAA51E7A451B005C8CE3 /* GoogleUserModel.swift */,
+				4683A5A81E7C0E1000EEA9FB /* GoogleMyLibraryBookshelves.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */,
 				462AFA9C1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift in Sources */,
 				21B2E3DB1E6D643900B513BF /* BookListCollectionViewCell.swift in Sources */,
+				4683A5A91E7C0E1000EEA9FB /* GoogleMyLibraryBookshelves.swift in Sources */,
 				461A6C901E6FBD2800E8A569 /* GoogleApi.swift in Sources */,
 				46EE949F1E65306C00096DE0 /* AppDelegate.swift in Sources */,
 				460B64401E683E7C001639C3 /* SearchResultViewController.swift in Sources */,
