@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
@@ -31,6 +32,25 @@ class ViewController: UIViewController {
         searchButton.sizeToFit()
         searchButton.isEnabled = false
         searchButton.rx.tap.subscribe(onNext: {[weak self] in self?.didtapSearchButton()}).disposed(by: disposeBag)
+        
+
+        let a = GoogleMyLibraryBookshelves.share.request().asDriver(onErrorJustReturn: GoogleMyLibraryBookshelvesResponse.empty)
+        let result = a.map { (res) -> [Bookshelf] in
+            res.bookshelves
+        }.asObservable()
+        result.subscribe(onNext: { (shelves) in
+            print("データがあったよ！")
+        }, onError: { (e) in
+            print(e)
+        }, onCompleted: {
+            print("complete")
+        }) {
+            print("終わったよ")
+        }.disposed(by: disposeBag)
+
+//        GoogleMyLibraryBookshelves.share.request_normal()
+
+        
         
         searchTextField.delegate = self
     }
