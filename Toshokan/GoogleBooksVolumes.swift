@@ -13,6 +13,7 @@ import RxSwift
 
 
 struct Volume {
+    let id: String
     let title: String
     let desc: String
     let imagePaths: Dictionary<VolumeThumbnailType, String>
@@ -72,14 +73,15 @@ extension GoogleBooksVolumes {
     private func getVolume(item: JSON) -> Volume {
         
         let title = item["volumeInfo"]["title"].stringValue
-        let desc = item["volumeInfo"]["title"].stringValue
+        let desc = item["volumeInfo"]["description"].stringValue
+        let id = item["volumeInfo"]["id"].stringValue
         var imagePaths:Dictionary<VolumeThumbnailType, String> = [:]
         item["volumeInfo"]["imageLinks"].forEach { (key, json) in
             if let thumbType = self.getVolumeThumbnailType(key: key) {
                 imagePaths[thumbType] = json.stringValue as String
             }
         }
-        return Volume(title: title, desc: desc, imagePaths: imagePaths)
+        return Volume(id: id, title: title, desc: desc, imagePaths: imagePaths)
     }
     
     private func getVolumeThumbnailType(key: String) -> VolumeThumbnailType? {
