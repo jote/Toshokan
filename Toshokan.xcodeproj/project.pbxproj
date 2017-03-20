@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		160F448E2930E8B9852B7E86 /* Pods_ToshokanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B663CB9DDEAA82240F3AB7 /* Pods_ToshokanTests.framework */; };
+		215AD4521E8028B500A62945 /* ShelvesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215AD4511E8028B500A62945 /* ShelvesList.storyboard */; };
+		215AD4541E80295500A62945 /* ShelvesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215AD4531E80295500A62945 /* ShelvesListViewController.swift */; };
+		215AD4561E80373A00A62945 /* ShelvesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215AD4551E80373900A62945 /* ShelvesTableViewCell.swift */; };
+		215AD4581E8039CC00A62945 /* ShelvesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 215AD4571E8039CC00A62945 /* ShelvesTableViewCell.xib */; };
 		21B2E3DB1E6D643900B513BF /* BookListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E3D91E6D643900B513BF /* BookListCollectionViewCell.swift */; };
 		21B2E3DC1E6D643900B513BF /* BookListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B2E3DA1E6D643900B513BF /* BookListCollectionViewCell.xib */; };
 		460B64301E67FFF4001639C3 /* Agreement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460B642F1E67FFF4001639C3 /* Agreement.storyboard */; };
@@ -59,6 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		215AD4511E8028B500A62945 /* ShelvesList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShelvesList.storyboard; sourceTree = "<group>"; };
+		215AD4531E80295500A62945 /* ShelvesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelvesListViewController.swift; sourceTree = "<group>"; };
+		215AD4551E80373900A62945 /* ShelvesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelvesTableViewCell.swift; sourceTree = "<group>"; };
+		215AD4571E8039CC00A62945 /* ShelvesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShelvesTableViewCell.xib; sourceTree = "<group>"; };
 		21B2E3D91E6D643900B513BF /* BookListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListCollectionViewCell.swift; sourceTree = "<group>"; };
 		21B2E3DA1E6D643900B513BF /* BookListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookListCollectionViewCell.xib; sourceTree = "<group>"; };
 		2AC5E0776369E8930DF8AF0E /* Pods-Toshokan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toshokan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toshokan/Pods-Toshokan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +134,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215AD4501E80286B00A62945 /* ShelvesListView */ = {
+			isa = PBXGroup;
+			children = (
+				215AD4511E8028B500A62945 /* ShelvesList.storyboard */,
+				215AD4531E80295500A62945 /* ShelvesListViewController.swift */,
+				215AD4551E80373900A62945 /* ShelvesTableViewCell.swift */,
+				215AD4571E8039CC00A62945 /* ShelvesTableViewCell.xib */,
+			);
+			name = ShelvesListView;
+			sourceTree = "<group>";
+		};
 		460B642D1E67FFCC001639C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				215AD4501E80286B00A62945 /* ShelvesListView */,
 				462AFA991E780CCA005C8CE3 /* BookGrid */,
 				466500321E6953C600EE4F9C /* BookList */,
 				460B643C1E683DAD001639C3 /* searchResultView */,
@@ -404,12 +424,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				460B64301E67FFF4001639C3 /* Agreement.storyboard in Resources */,
+				215AD4521E8028B500A62945 /* ShelvesList.storyboard in Resources */,
 				460B64371E681530001639C3 /* Agreement.html in Resources */,
 				21B2E3DC1E6D643900B513BF /* BookListCollectionViewCell.xib in Resources */,
 				460B643E1E683E5E001639C3 /* SearchResult.storyboard in Resources */,
 				46EE94A91E65306C00096DE0 /* LaunchScreen.storyboard in Resources */,
 				462AFA9D1E780CF6005C8CE3 /* BookGridCollectionViewCell.xib in Resources */,
 				46FFD3E61E65607800082EE0 /* GoogleService-Info.plist in Resources */,
+				215AD4581E8039CC00A62945 /* ShelvesTableViewCell.xib in Resources */,
 				46EE94A61E65306C00096DE0 /* Assets.xcassets in Resources */,
 				46EE94A41E65306C00096DE0 /* Main.storyboard in Resources */,
 			);
@@ -533,7 +555,9 @@
 			files = (
 				460B643B1E683541001639C3 /* ToshokanUserDefaultsModel.swift in Sources */,
 				462AFAA61E7A451C005C8CE3 /* GoogleUserModel.swift in Sources */,
+				215AD4561E80373A00A62945 /* ShelvesTableViewCell.swift in Sources */,
 				460B64321E68005C001639C3 /* AgreementViewController.swift in Sources */,
+				215AD4541E80295500A62945 /* ShelvesListViewController.swift in Sources */,
 				46EE94A11E65306C00096DE0 /* ViewController.swift in Sources */,
 				462AFA9C1E780CF6005C8CE3 /* BookGridCollectionViewCell.swift in Sources */,
 				21B2E3DB1E6D643900B513BF /* BookListCollectionViewCell.swift in Sources */,

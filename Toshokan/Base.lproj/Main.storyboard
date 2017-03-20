@@ -46,6 +46,10 @@
                                 <rect key="frame" x="334" y="143" width="31" height="30"/>
                                 <state key="normal" title="検索"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju7-Ob-SXk">
+                                <rect key="frame" x="148.5" y="438" width="79" height="30"/>
+                                <state key="normal" title="My Libraies"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,11 +59,13 @@
                             <constraint firstAttribute="trailing" secondItem="V7f-70-BHQ" secondAttribute="trailing" constant="10" id="Hsn-sO-TPJ"/>
                             <constraint firstItem="V7f-70-BHQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Kbz-9P-M33"/>
                             <constraint firstAttribute="trailing" secondItem="CN3-OC-ezG" secondAttribute="trailing" constant="10" id="NM3-lB-Lto"/>
+                            <constraint firstItem="ju7-Ob-SXk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q51-89-ssf"/>
                             <constraint firstItem="CN3-OC-ezG" firstAttribute="top" secondItem="yYm-G3-uzM" secondAttribute="bottom" constant="10" id="a5R-x2-Dg6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yYm-G3-uzM" secondAttribute="trailing" constant="10" id="afq-Df-Wfs"/>
                             <constraint firstItem="yYm-G3-uzM" firstAttribute="top" secondItem="V7f-70-BHQ" secondAttribute="bottom" constant="10" id="atp-UH-nLs"/>
                             <constraint firstItem="hN0-9Q-yB1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gtF-hI-env"/>
                             <constraint firstItem="yYm-G3-uzM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="i3g-ak-AeH"/>
+                            <constraint firstItem="ju7-Ob-SXk" firstAttribute="top" secondItem="hN0-9Q-yB1" secondAttribute="bottom" constant="30" id="iwe-Hp-onO"/>
                             <constraint firstItem="YzA-7M-BLc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tjF-qS-G8x"/>
                         </constraints>
                     </view>
@@ -67,14 +73,24 @@
                     <connections>
                         <outlet property="searchButton" destination="CN3-OC-ezG" id="YET-fM-GD5"/>
                         <outlet property="searchTextField" destination="yYm-G3-uzM" id="RPj-bJ-KDY"/>
+                        <outlet property="shelvesListButton" destination="ju7-Ob-SXk" id="y8k-Oc-QyA"/>
                         <outlet property="signInButton" destination="YzA-7M-BLc" id="gAd-0d-hYj"/>
                         <outlet property="signOutButton" destination="hN0-9Q-yB1" id="TBi-AC-xrL"/>
                         <segue destination="m5W-8u-hNe" kind="show" identifier="toSearchResultSegue" id="fRb-yC-FFf"/>
+                        <segue destination="wN6-Hb-ffb" kind="show" identifier="toShelvesListSegue" id="zTB-cP-5ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--ShelvesList-->
+        <scene sceneID="fQL-Vb-6qO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShelvesList" id="wN6-Hb-ffb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjp-8Y-T4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="241"/>
         </scene>
         <!--SearchResult-->
         <scene sceneID="8te-DV-Y1P">
