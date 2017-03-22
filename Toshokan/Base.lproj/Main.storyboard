@@ -73,7 +73,7 @@
                     <connections>
                         <outlet property="searchButton" destination="CN3-OC-ezG" id="YET-fM-GD5"/>
                         <outlet property="searchTextField" destination="yYm-G3-uzM" id="RPj-bJ-KDY"/>
-                        <outlet property="shelvesListButton" destination="ju7-Ob-SXk" id="y8k-Oc-QyA"/>
+                        <outlet property="shelvesListButton" destination="ju7-Ob-SXk" id="2KA-HI-S5q"/>
                         <outlet property="signInButton" destination="YzA-7M-BLc" id="gAd-0d-hYj"/>
                         <outlet property="signOutButton" destination="hN0-9Q-yB1" id="TBi-AC-xrL"/>
                         <segue destination="m5W-8u-hNe" kind="show" identifier="toSearchResultSegue" id="fRb-yC-FFf"/>

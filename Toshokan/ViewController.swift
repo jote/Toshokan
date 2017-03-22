@@ -15,8 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var shelvesListButton: UIButton!
     
     let _searchResultSegue = "toSearchResultSegue"
+    let _shelvesListSegue = "toShelvesListSegue"
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -32,26 +34,8 @@ class ViewController: UIViewController {
         searchButton.sizeToFit()
         searchButton.isEnabled = false
         searchButton.rx.tap.subscribe(onNext: {[weak self] in self?.didtapSearchButton()}).disposed(by: disposeBag)
-        
+        shelvesListButton.rx.tap.subscribe(onNext: {[weak self] in self?.didtapShelvesListButton()}).disposed(by: disposeBag)
 
-        let a = GoogleMyLibraryBookshelves.share.request().asDriver(onErrorJustReturn: GoogleMyLibraryBookshelvesResponse.empty)
-        let result = a.map { (res) -> [Bookshelf] in
-            res.bookshelves
-        }.asObservable()
-        result.subscribe(onNext: { (shelves) in
-            print("データがあったよ！")
-        }, onError: { (e) in
-            print(e)
-        }, onCompleted: {
-            print("complete")
-        }) {
-            print("終わったよ")
-        }.disposed(by: disposeBag)
-
-//        GoogleMyLibraryBookshelves.share.request_normal()
-
-        
-        
         searchTextField.delegate = self
     }
 
@@ -82,6 +66,10 @@ class ViewController: UIViewController {
     
     func didtapSearchButton() {
         performSegue(withIdentifier: _searchResultSegue, sender: searchTextField.text)
+    }
+
+    func didtapShelvesListButton() {
+        performSegue(withIdentifier: _shelvesListSegue, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

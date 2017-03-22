@@ -12,27 +12,6 @@ import RxCocoa
 import SwiftyJSON
 
 
-/// 本棚の公開状態
-///
-/// - publicStatus: 公開
-/// - privateStatus: 非公開
-enum BookshelfAccessStatus: String {
-    case publicStatus = "PRIVATE"
-    case privateStatus = "PUBLIC"
-}
-
-/// 本情報
-struct Bookshelf {
-    let id:Int
-    let title:String
-    let description: String
-    let access: BookshelfAccessStatus
-    let updated: TimeInterval?
-    let created: TimeInterval?
-    let volumeCount: Int
-    let volumesLastUpdated:TimeInterval?
-    let selfLink:URL
-}
 
 /// リクエストパラメータを列挙
 ///
@@ -131,7 +110,6 @@ class GoogleMyLibraryBookshelves: GoogleAPI {
         return URLSession.shared.rx.response(request: urlRequet)
             .retry(3)
             .map{ httpResponse, data -> Bool in
-                print(JSON(data))
                 if httpResponse.statusCode != 204 {
                     print("Request failed. http status: \(httpResponse.statusCode)")
                     return false
@@ -180,7 +158,6 @@ class GoogleMyLibraryBookshelves: GoogleAPI {
         return URLSession.shared.rx.response(request: urlRequet)
             .retry(3)
             .map{ httpResponse, data -> Bool in
-                print(JSON(data))
                 if httpResponse.statusCode != 204 {
                     print("Request failed. http status: \(httpResponse.statusCode)")
                     return false
@@ -257,7 +234,6 @@ class GoogleMyLibraryBookshelves: GoogleAPI {
     /// - Parameter item: JSON
     /// - Returns: Bookshelf
     private func getBookshelf(item: JSON) -> Bookshelf {
-        print(item)
         let id:Int =  item["id"].intValue
         let title:String = item["title"].stringValue
         let description:String = item["description"].stringValue

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hmM-TE-Raq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Volume View Controller-->
+        <scene sceneID="wux-ks-NbU">
+            <objects>
+                <viewController id="hmM-TE-Raq" customClass="VolumeViewController" customModule="Toshokan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wzD-GV-Zpx"/>
+                        <viewControllerLayoutGuide type="bottom" id="FgV-DC-ARX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zYx-Mo-unR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0UC-rn-EPh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZc-zc-9Hl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-BV-AWA">
+                                        <rect key="frame" x="166.5" y="201" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNg-Bi-Yzq">
+                                        <rect key="frame" x="149" y="221.5" width="77" height="381.5"/>
+                                        <state key="normal" title="本棚に追加"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0UC-rn-EPh" firstAttribute="leading" secondItem="zYx-Mo-unR" secondAttribute="leading" id="6tn-Rc-7CL"/>
+                            <constraint firstItem="0UC-rn-EPh" firstAttribute="top" secondItem="wzD-GV-Zpx" secondAttribute="bottom" id="Drn-6J-BpX"/>
+                            <constraint firstItem="FgV-DC-ARX" firstAttribute="top" secondItem="0UC-rn-EPh" secondAttribute="bottom" id="Oz7-i1-XST"/>
+                            <constraint firstAttribute="trailing" secondItem="0UC-rn-EPh" secondAttribute="trailing" id="hog-5y-aqR"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addShelfButton" destination="lNg-Bi-Yzq" id="2gc-Po-fnn"/>
+                        <outlet property="thumbnailView" destination="mZc-zc-9Hl" id="9u3-gn-9XI"/>
+                        <outlet property="titleLabelView" destination="sFm-BV-AWA" id="4CO-Ey-RhK"/>
+                        <segue destination="eAi-gd-foJ" kind="presentation" identifier="toArrangeShelfSegue" id="4An-O5-PEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vs-Gi-991" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="179.46026986506749"/>
+        </scene>
+        <!--ArrangeShelfView-->
+        <scene sceneID="hji-AS-j0k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ArrangeShelfView" id="eAi-gd-foJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umO-xD-x3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="114"/>
+        </scene>
+    </scenes>
+</document>

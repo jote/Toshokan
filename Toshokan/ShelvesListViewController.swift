@@ -15,6 +15,7 @@ class ShelvesListViewController: UIViewController {
     @IBOutlet weak var shelvesViewCell: UITableViewCell!
     
     private let disposeBag = DisposeBag()
+    private var shelves:[Bookshelf] = []
     
 
     override func viewDidLoad() {
@@ -22,18 +23,35 @@ class ShelvesListViewController: UIViewController {
         
         //shelves 取得
         let seaquence = GoogleMyLibraryBookshelves.share.listRequest().asDriver(onErrorJustReturn: GoogleMyLibraryBookshelvesResponse.empty)
-        let shelves = seaquence.map { (res) -> [Bookshelf] in
+        let shelvesOnResponse = seaquence.map { (res) -> [Bookshelf] in
             res.bookshelves
             }.asObservable()
 
-        shelves.bindTo(shelvesTableView.rx.items(cellIdentifier: "shelfCell", cellType: ShelvesTableViewCell.self)) { (row, shelf, cell) in
+        shelvesOnResponse.bindTo(shelvesTableView.rx.items(cellIdentifier: "shelfCell", cellType: ShelvesTableViewCell.self)) { (row, shelf, cell) in
             cell.title = shelf.title
             cell.shelfId = shelf.id
+            self.shelves.append(shelf)
         }.addDisposableTo(disposeBag)
+        
+//        タップされたcell情報から次の画面へ移動
+        shelvesTableView.rx.itemSelected.subscribe( onNext: { [weak self] indexPath in
+            // shelvesIdを渡して詳細ベージに遷移する
+            if let bookshelf = self?.shelves[indexPath.item] {
+                if self != nil {
+                    self?.performSegue(withIdentifier: "toBookShelfSegue", sender: bookshelf.id)
+                }
+            }
+        }).disposed(by: disposeBag)
         
         let nib = UINib(nibName: "ShelvesTableViewCell", bundle: nil)
         shelvesTableView.register(nib, forCellReuseIdentifier: "shelfCell")
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBookShelfSegue" {
+            let viewController = segue.destination as! BookShelfViewController
+            viewController.shelfId = sender as! Int
+        }
     }
 
     override func didReceiveMemoryWarning() {

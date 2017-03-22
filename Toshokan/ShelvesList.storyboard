@@ -46,11 +46,20 @@
                     </view>
                     <connections>
                         <outlet property="shelvesTableView" destination="lJk-nb-8fi" id="mRC-KV-2GM"/>
+                        <segue destination="gh5-Cr-bf3" kind="show" identifier="toBookShelfSegue" id="9XW-WO-oRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imJ-Y8-6gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="146" y="212"/>
+        </scene>
+        <!--BookShelfView-->
+        <scene sceneID="2XB-22-h5R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BookShelfView" id="gh5-Cr-bf3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Na-xf-nqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="78"/>
         </scene>
     </scenes>
 </document>
