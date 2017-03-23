@@ -12,6 +12,8 @@ enum ToshokanUserDefaultsKey: String {
     case hasAgreement = "hasAgreement"
     case searchResultViewType = "searchResultViewType"
     case googleUserInfo = "googleUserInfo"
+    case volumeThoughts = "volumeThought"
+    case volumeStatus = "volumeStatus"
 }
 
 /// Toshokan App 独自のUserDefaultを操作
@@ -50,5 +52,20 @@ class ToshokanUserDefaultsModel {
     public func saveGoogleUserInfo(userInfo: String) {
         userDefaults.set(userInfo, forKey: ToshokanUserDefaultsKey.googleUserInfo.rawValue)
     }
+    
+    public func getVolumeThoughts() -> String? {
+        return userDefaults.string(forKey: ToshokanUserDefaultsKey.volumeThoughts.rawValue)
+    }
+    
+    public func setVolumeThoughts(thoughts: String) {
+        userDefaults.set(thoughts, forKey: ToshokanUserDefaultsKey.volumeThoughts.rawValue)
+    }
 
+    public func getVolumeStatus() -> String? {
+        return userDefaults.string(forKey: ToshokanUserDefaultsKey.volumeStatus.rawValue)
+    }
+    
+    public func setVolumeStatus(thoughts: String) {
+        userDefaults.set(thoughts, forKey: ToshokanUserDefaultsKey.volumeStatus.rawValue)
+    }
 }

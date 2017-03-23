@@ -23,3 +23,9 @@ enum VolumeThumbnailType: String {
     case large = "large"
     case extraLarge = "extraLarge"
 }
+
+enum VolumeStatus: String {
+    case toRead = "toRead"
+    case reading = "reading"
+    case haveRead = "haveRead"
+}

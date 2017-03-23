@@ -35,6 +35,7 @@
 		4683A5B01E80E7AF00EEA9FB /* VolumeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683A5AF1E80E7AF00EEA9FB /* VolumeEntity.swift */; };
 		4683A5B31E80E81D00EEA9FB /* BookshelfEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683A5B21E80E81D00EEA9FB /* BookshelfEntity.swift */; };
 		4683A5B51E80E91B00EEA9FB /* GoogleMylibraryBookshelvesVolumes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683A5B41E80E91B00EEA9FB /* GoogleMylibraryBookshelvesVolumes.swift */; };
+		4692D7D61E83B6F80070FE04 /* VolumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692D7D51E83B6F80070FE04 /* VolumeViewModel.swift */; };
 		46AC36A81E813B33003792A7 /* VolumeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AC36A71E813B33003792A7 /* VolumeView.storyboard */; };
 		46AC36AB1E813DEE003792A7 /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AC36AA1E813DEE003792A7 /* VolumeViewController.swift */; };
 		46AC36AE1E81475E003792A7 /* ArrangeShelfView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AC36AD1E81475E003792A7 /* ArrangeShelfView.storyboard */; };
@@ -100,6 +101,7 @@
 		4683A5AF1E80E7AF00EEA9FB /* VolumeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeEntity.swift; sourceTree = "<group>"; };
 		4683A5B21E80E81D00EEA9FB /* BookshelfEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookshelfEntity.swift; sourceTree = "<group>"; };
 		4683A5B41E80E91B00EEA9FB /* GoogleMylibraryBookshelvesVolumes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMylibraryBookshelvesVolumes.swift; sourceTree = "<group>"; };
+		4692D7D51E83B6F80070FE04 /* VolumeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeViewModel.swift; sourceTree = "<group>"; };
 		46AC36A71E813B33003792A7 /* VolumeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolumeView.storyboard; sourceTree = "<group>"; };
 		46AC36AA1E813DEE003792A7 /* VolumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
 		46AC36AD1E81475E003792A7 /* ArrangeShelfView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArrangeShelfView.storyboard; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				46AC36A71E813B33003792A7 /* VolumeView.storyboard */,
 				46AC36AA1E813DEE003792A7 /* VolumeViewController.swift */,
+				4692D7D51E83B6F80070FE04 /* VolumeViewModel.swift */,
 			);
 			name = VolumeView;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				461A6C901E6FBD2800E8A569 /* GoogleApi.swift in Sources */,
 				46EE949F1E65306C00096DE0 /* AppDelegate.swift in Sources */,
 				460B64401E683E7C001639C3 /* SearchResultViewController.swift in Sources */,
+				4692D7D61E83B6F80070FE04 /* VolumeViewModel.swift in Sources */,
 				460B64341E680D61001639C3 /* AgreementViewModel.swift in Sources */,
 				46248C671E6E975A005667A5 /* GoogleBooksVolumes.swift in Sources */,
 				46248C651E6E6DEA005667A5 /* SearchResultViewModel.swift in Sources */,
