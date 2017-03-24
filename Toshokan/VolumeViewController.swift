@@ -45,6 +45,18 @@ class VolumeViewController: UIViewController {
         titleLabelView.text = _volume.title
         //statusボタンの設定
         initStatusButtons()
+        toReadButton.rx.tap.subscribe(onNext: {[weak self] in
+            self?.viewModel.setVolumeStatus(volumeId: (self?._volume.id)!, status: VolumeStatus.toRead)
+            self?.initStatusButtons()
+        }).disposed(by: disposeBag)
+        readingNowButton.rx.tap.subscribe(onNext: {[weak self] in
+            self?.viewModel.setVolumeStatus(volumeId: (self?._volume.id)!, status: VolumeStatus.reading)
+            self?.initStatusButtons()
+        }).disposed(by: disposeBag)
+        haveReadButton.rx.tap.subscribe(onNext: {[weak self] in
+            self?.viewModel.setVolumeStatus(volumeId: (self?._volume.id)!, status: VolumeStatus.haveRead)
+            self?.initStatusButtons()
+        }).disposed(by: disposeBag)
         
         thoughtTextView.text = viewModel.getThought(volumeId: _volume.id)
         
@@ -59,17 +71,17 @@ class VolumeViewController: UIViewController {
     
     private func initStatusButtons() {
         //statusボタンの設定
-        toReadButton.isEnabled = false
-        readingNowButton.isEnabled = false
-        haveReadButton.isEnabled = false
+        toReadButton.alpha = CGFloat(0.5)
+        readingNowButton.alpha = CGFloat(0.5)
+        haveReadButton.alpha = CGFloat(0.5)
         
         let status = viewModel.getVolumeStatus(volumeId: _volume.id)
         if status == VolumeStatus.toRead {
-            toReadButton.isEnabled = true
+            toReadButton.alpha = CGFloat(1)
         } else if status == VolumeStatus.reading {
-            readingNowButton.isEnabled = true
+            readingNowButton.alpha = CGFloat(1)
         } else if status == VolumeStatus.haveRead {
-            haveReadButton.isEnabled = true
+            haveReadButton.alpha = CGFloat(1)
         }
     }
     

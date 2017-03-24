@@ -23,6 +23,12 @@ class VolumeViewModel {
         var json:JSON!
         if let thoughts = ToshokanUserDefaultsModel.sharedUserInfo.getVolumeThoughts(){
             json = JSON(parseJSON: thoughts)
+            do {
+                try json = json.merged(with: JSON([volumeId: thought]))
+            }catch {
+                //TODO throw error
+                print(error)
+            }
            json[volumeId].string = thought
         } else {
             json = JSON([volumeId: thought])
@@ -51,6 +57,24 @@ class VolumeViewModel {
         default:
             return VolumeStatus.toRead
         }
+    }
+    
+    public func setVolumeStatus(volumeId: String, status: VolumeStatus) {
+        var json: JSON!
+        if let statusStr = ToshokanUserDefaultsModel.sharedUserInfo.getVolumeStatus(){
+            json = JSON(parseJSON: statusStr)
+            do {
+                json = try json.merged(with: JSON([volumeId: status.rawValue]))
+            } catch {
+                //TODO throw error
+                print(error)
+            }
+        } else {
+            json = JSON([volumeId: status.rawValue])
+        }
+        let jsonStr = json.rawString([writtingOptionsKeys.castNilToNSNull : false])
+        ToshokanUserDefaultsModel.sharedUserInfo.setVolumeStatus(thoughts: jsonStr!)
+
     }
 
 }
